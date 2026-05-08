@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lot Invaders Mega</title>
+  <meta name="description" content="Lot Invaders Mega is a portrait arcade driving game for iPhone and iPad.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f8f4df;
+      --muted: #bac7b6;
+      --panel: rgba(13, 20, 22, 0.72);
+      --line: rgba(248, 244, 223, 0.22);
+      --accent: #ffcc4d;
+      --green: #48d08f;
+      --blue: #6cc7ff;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(108, 199, 255, 0.22), transparent 34%),
+        radial-gradient(circle at 82% 18%, rgba(255, 204, 77, 0.20), transparent 32%),
+        linear-gradient(160deg, #142529 0%, #192219 47%, #101417 100%);
+      color: var(--ink);
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 36px;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: 0;
+      margin: 0 0 14px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 88px);
+      line-height: 0.92;
+      margin: 0 0 18px;
+      letter-spacing: 0;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    a.button {
+      border: 2px solid var(--line);
+      color: var(--ink);
+      background: rgba(248, 244, 223, 0.08);
+      padding: 13px 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    a.button.primary {
+      background: var(--accent);
+      color: #14120a;
+      border-color: #fff1a8;
+    }
+
+    .device {
+      justify-self: center;
+      width: min(310px, 80vw);
+      aspect-ratio: 9 / 16;
+      border: 3px solid rgba(248, 244, 223, 0.36);
+      border-radius: 34px;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(0,0,0,0.34));
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+    }
+
+    .screen {
+      height: 100%;
+      border-radius: 20px;
+      background:
+        linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0)),
+        repeating-linear-gradient(90deg, #263531 0 16px, #1f2a28 16px 32px);
+      border: 2px solid rgba(0,0,0,0.38);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .screen img {
+      width: 58%;
+      height: auto;
+      image-rendering: auto;
+      border-radius: 18px;
+      box-shadow: 0 16px 42px rgba(0,0,0,0.36);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .tile {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 18px;
+      min-height: 130px;
+    }
+
+    .tile h2 {
+      font-size: 16px;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--blue); }
+
+    @media (max-width: 760px) {
+      main { padding-top: 26px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .device { width: min(260px, 72vw); }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">iPhone + iPad arcade driving</p>
+        <h1 id="title">Lot Invaders Mega</h1>
+        <p>Drive through a chaotic parking lot, crush standard invaders, dodge traffic and obstacles, collect cash, upgrade your garage, and push each run further as speed and teleport pressure rise.</p>
+        <div class="actions">
+          <a class="button primary" href="support.html">Support</a>
+          <a class="button" href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="device" aria-label="Lot Invaders Mega app preview">
+        <div class="screen">
+          <img src="assets/app-icon.png" alt="Lot Invaders Mega app icon">
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Game features">
+      <article class="tile">
+        <h2>Arcade Runs</h2>
+        <p>Portrait-first sessions with fuel pickups, cash routes, alien risk, and rising speed.</p>
+      </article>
+      <article class="tile">
+        <h2>Garage Progression</h2>
+        <p>Buy cars, tune fuel, handling, durability, and engine upgrades, then take the build back out.</p>
+      </article>
+      <article class="tile">
+        <h2>Optional Rewards</h2>
+        <p>Rewarded ads are optional. No forced interstitial ads are used.</p>
+      </article>
+    </section>
+
+    <footer>
+      <span>© 2026 Lot Invaders Mega</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+    </footer>
+  </main>
+</body>
+</html>
